@@ -1,21 +1,17 @@
 # data-agent-research
 
-Notes and run artifacts for data-agent evaluation (DataAgentBench, FDABench, related interactive SQL benches). Not a fork of those projects.
+Notes for data-agent evaluation: DataAgentBench failure modes and related user-in-the-loop SQL benches. Not a fork of those projects.
 
-Not in this repo: cloned benches, databases, venvs, or API keys.
+Not in this repo: cloned benches, databases, venvs, run dumps, or API keys.
 
 ## Layout
 
 | Path | What |
 | --- | --- |
-| `notes/` | FM1–FM4 taxonomy, DAB error writeup, related work, FDABench 5-query recap |
-| `experiments/fdabench/` | 5 FDABench-Lite queries (runner + summaries) |
-| `patches/` | Local FDABench import/timeout patch as a diff, not a full fork |
-
-## What is not here
-
-- `ucbepic/DataAgentBench`, `fdabench/FDAbench` (use those remotes)
-- `bird_databases/`, `.env`
+| `notes/fm-taxonomy.txt` | FM1–FM4 definitions |
+| `notes/dab-cross-dataset-error-analysis.md` | gpt-5.5 DAB error writeup |
+| `notes/related-work-user-interact.md` | 2025–2026 benches with a user turn |
+| `notes/llm-cost-estimation.md` | Token cost formula |
 
 ## Cost estimates
 
