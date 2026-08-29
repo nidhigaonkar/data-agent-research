@@ -1,0 +1,12 @@
+.env
+.env.*
+*.pem
+*.key
+credentials.json
+.venv/
+__pycache__/
+.DS_Store
+bird_databases/
+*.sqlite
+*.db
+node_modules/

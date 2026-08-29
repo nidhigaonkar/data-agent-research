@@ -1,0 +1,29 @@
+FM1 — Fails Before Planning
+Definition:
+- The agent does not attempt to solve the query.
+Example:
+- The agent does not issue any tool calls.
+
+FM2 — Incorrect Plan
+Definition:
+- The agent attempts to solve the user's query, but the PLAN (i.e., the logical structure) of the solution is wrong. That is, even if all steps were executed perfectly (e.g., correct data selection, correct implementation, no execution errors), the plan cannot produce the ground-truth answer.
+Examples:
+- Missing operations specified or implied by the user.
+- Adding constraints not requested by the user.
+- Stops early and returns an answer before all requirements of the query are completed.
+
+FM3 — Correct Plan, Wrong Data Selection
+Definition:
+- The agent follows a theoretically correct plan for answering the user's query, but selects incorrect data sources in its implementation, such that the required information exists but is retrieved from the wrong database, table, collection, column, or field.
+Example:
+- Using an incorrect column in a selection or filtering condition (e.g., a WHERE clause references a column that does not represent the queried attribute, even though the correct column exists elsewhere in the schema).
+- Querying or joining a table that does not represent the queried entity, despite the correct table exists elsewhere in the schema.
+
+FM4 — Correct Plan and Data Selection, Incorrect Implementation
+Definition:
+The agent the correct plan and selects the correct tables and columns, but implements the computation incorrectly.
+Examples:
+- Arithmetic errors, such as computing an aggregate with an incorrect formula (e.g., dividing by the number of unique entities rather than the total number of contributing entities or records when calculating an overall average).
+- Incorrect regular expressions or parsing rules, such that extracted values include unintended matches or miss required values (e.g., patterns that capture unrelated numbers or fail to match the intended tokens).
+- Parsing errors, such as using unsupported syntax, improper escaping, or assumptions about the execution environment that cause incorrect behavior or failed execution.
+- Incorrect join implementation, where the agent applies an invalid join condition or fails to normalize or transform identifiers before joining, even though the trace indicates awareness that normalization or alignment is required.
