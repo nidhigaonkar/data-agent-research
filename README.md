@@ -1,8 +1,7 @@
 # data-agent-research
 
-Notes for data-agent evaluation: DataAgentBench failure modes and related user-in-the-loop SQL benches. Not a fork of those projects.
+Notes for data-agent evaluation: DataAgentBench failure modes and related user-in-the-loop SQL benches. 
 
-Not in this repo: cloned benches, databases, venvs, run dumps, or API keys.
 
 ## Layout
 
